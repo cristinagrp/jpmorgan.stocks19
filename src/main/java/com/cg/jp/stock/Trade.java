@@ -8,13 +8,13 @@ public class Trade {
 		SELL;
 	}
 	private LocalDateTime timestamp;
-	private int shareCount;
+	private long shareCount;
 	private BuySell buySell;
-	private int price;
+	private double price;
 	
-	public Trade(int shareCount, BuySell buySell, int price) {
+	public Trade(long quantity, BuySell buySell, double price) {
 		this.timestamp = LocalDateTime.now();
-		this.shareCount = shareCount;
+		this.shareCount = quantity;
 		this.buySell = buySell;
 		this.price = price;
 	}
@@ -27,7 +27,7 @@ public class Trade {
 		this.timestamp = timestamp;
 	}
 
-	public int getShareCount() {
+	public long getShareCount() {
 		return shareCount;
 	}
 
@@ -43,7 +43,7 @@ public class Trade {
 		this.buySell = buySell;
 	}
 
-	public int getPrice() {
+	public double getPrice() {
 		return price;
 	}
 
